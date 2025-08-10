@@ -28,5 +28,8 @@
     "**": [
       "prettier --write --cache --ignore-unknown"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

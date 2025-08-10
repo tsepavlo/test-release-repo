@@ -1,0 +1,32 @@
+{
+  "name": "test-release-repo",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "ci:publish": "changeset publish",
+    "ci:version": "changeset version && pnpm install --no-frozen-lockfile",
+    "fix": "pnpm run /fix:/",
+    "fix:prettier": "prettier --write .",
+    "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm /^lint:/",
+    "lint:packages": "pnpm -r lint",
+    "lint:prettier": "prettier --check .",
+    "pack": "pnpm -r exec npm pack",
+    "prepare": "husky"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.5",
+    "@types/node": "^22",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "only-allow": "^1.2.1",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "**": [
+      "prettier --write --cache --ignore-unknown"
+    ]
+  }
+}

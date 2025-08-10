@@ -10,7 +10,6 @@
     "fix:prettier": "prettier --write .",
     "preinstall": "npx only-allow pnpm",
     "lint": "pnpm /^lint:/",
-    "lint:packages": "pnpm -r lint",
     "lint:prettier": "prettier --check .",
     "pack": "pnpm -r exec npm pack",
     "prepare": "husky"

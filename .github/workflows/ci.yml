@@ -71,4 +71,5 @@ jobs:
         # You can do something when a publish should happen.
         run: pnpm ci:publish
         env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
